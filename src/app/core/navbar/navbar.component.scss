@@ -1,0 +1,28 @@
+ul {
+  list-style-type: none;
+}
+
+.nav {
+  background-image: linear-gradient(to right, #2995fb42, #2996FB);
+}
+
+button {
+  background-color: white;
+  border: 0;
+  border-radius: 15px;
+  height: 45px;
+  text-transform: capitalize;
+}
+
+// hover
+button:hover {
+  border-radius: 15px;
+  transform: translate(0px, 10px);
+  transition: 0.6s;
+}
+
+
+
+
+
+
