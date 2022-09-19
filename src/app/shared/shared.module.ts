@@ -10,6 +10,9 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    HotelCardComponent
   ]
 })
 export class SharedModule { }

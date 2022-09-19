@@ -1,1 +1,28 @@
-<p>hotel-card works!</p>
+
+<div class="hotel-card">
+  <div class="top-section slider grid">
+    <div class="main-img">
+      <img src="../../../../assets/images/boh.jpg" height="147px" alt="">
+    </div>
+    <div class="small-img">
+      <img src="../../../../assets/images/boh.jpg" height="49px" alt="">
+      <img src="../../../../assets/images/boh.jpg" height="49px" alt="">
+      <img src="../../../../assets/images/boh.jpg" height="49px" alt="">
+    </div>
+  </div>
+  <div class="bottom-section">
+    <h2>
+      Hotel Termini
+    </h2>
+    <div class="stars">
+      <div>
+        <i class="icon ion-ios-star-outline"
+        *ngFor="let star of stars ; let i = index"
+        ></i>
+        <span>3.7</span>
+        <div class="price">a partire da <strong>116€</strong></div>
+      </div>
+    </div>
+
+  </div>
+</div>
