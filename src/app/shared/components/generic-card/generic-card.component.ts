@@ -24,11 +24,6 @@ import { CartItem } from 'src/app/model/cart-item';
 export class GenericCardComponent {
 
   @Input() title: string = '';
-  @Input() isLogin: boolean = false;
-  @Input() isReservation: boolean = false;
-  @Input() isReview: boolean = false;
-  @Input() isContact: boolean = false;
-  @Input() cartItems: CartItem[] = [];
-  @Input() outside: boolean = false;
+  
 
 }
