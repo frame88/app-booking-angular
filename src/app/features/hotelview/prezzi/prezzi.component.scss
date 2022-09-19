@@ -1,0 +1,48 @@
+/* ---- PREZZI ---- */
+
+.container-hotel-price {
+  border: 1px solid gray;
+  width: 60%;
+  border-radius: 15px;
+}
+
+.hotel-price {
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  width: 100%;
+}
+
+.gray-line {
+  height: 2px;
+  width: 70%;
+  background-color: rgba(128, 128, 128, 0.514);
+}
+
+.first {
+  border-radius: 15px 0 0 15px;
+}
+
+.last {
+  border-radius: 0 15px 15px 0;
+}
+
+.price {
+  font-weight: bold;
+}
+
+button {
+  border: 1px solid #2996FB;
+  color: #2996FB;
+  background-color: white;
+}
+
+/* HOVER */
+
+.price:hover {
+  color: #2996FB;
+}
+
+button:hover {
+  background-color: #2996FB;
+  color: white;
+  transition: 0.3s;
+}
