@@ -20,15 +20,13 @@ import { ReservationComponent } from './components/reservation/reservation.compo
     ReservationComponent
   ],
   exports: [
-    GenericCardComponent
+    GenericCardComponent,
+    HotelCardComponent,
+    CommonModule,
+    FormsModule
   ],
   imports: [
     CommonModule
   ],
-  exports:[
-    HotelCardComponent,
-    CommonModule,
-    FormsModule
-  ]
 })
 export class SharedModule { }
