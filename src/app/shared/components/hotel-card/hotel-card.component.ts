@@ -6,11 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class HotelCardComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class HotelCardComponent {
+  stars: number[] = [1, 2, 3,4,5]
 }
