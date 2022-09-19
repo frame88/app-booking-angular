@@ -1,0 +1,67 @@
+// SEARCH BAR
+input[type=text] {
+  width: 20%;
+  border: 5px solid #3C4FFF;
+  border-radius: 0 15px 15px 0;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+  border-radius: 15px;
+}
+
+.form {
+  outline: none;
+}
+
+.label {
+  background-color: #3C4FFF;
+  border-radius: 15px 0 0 15px;
+  display: none;
+}
+
+
+// HOVER SEARCH BAR
+
+.form:hover {
+  border-radius: 0 15px 15px 0;
+  outline: none;
+}
+
+.form:hover {
+  width: 60%;
+  transition: 0.6s;
+}
+
+.jumbotron {
+    transform: translateY(2em);
+  }
+
+.jumbotron:hover .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.jumbotron:hover .form {
+  display: block;
+  border-radius: 0 15px 15px 0;
+}
+
+// copertina
+.palme {
+  height: 40vh;
+  background-image: url(../../../../assets/img/palma_NG1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+#aereo {
+  width: 150px;
+  transform: translateY(5em);
+  border: 5px solid white;
+  border-radius: 50%;
+  //ritagliare png
+}
