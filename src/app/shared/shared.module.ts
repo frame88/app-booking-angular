@@ -22,11 +22,10 @@ import { ReservationComponent } from './components/reservation/reservation.compo
   exports: [
     GenericCardComponent,
     HotelCardComponent,
-    CommonModule,
-    FormsModule
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
 })
 export class SharedModule { }

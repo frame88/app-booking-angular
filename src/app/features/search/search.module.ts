@@ -8,6 +8,9 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
   declarations: [
     JumbotronComponent
   ],
+  exports:[
+    JumbotronComponent
+  ],
   imports: [
     CommonModule
   ]

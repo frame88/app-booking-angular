@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { Auth } from 'src/app/model/auth';
 
+
 @Component({
   selector: 'app-login',
   template: `
