@@ -5,7 +5,7 @@ import { Hotel } from 'src/app/model/hotel';
   selector: 'app-hotel-list',
   template: `
   <div class="hotel-container">
-    <h2>Hotel in {{text}}</h2>
+    <h2>{{hotels?.length}} Hotel in {{text}}</h2>
     <div class="flex-wrap">
 
       <app-hotel-card [city]='hotel.city' *ngFor="let hotel of hotels" [rating]="hotel.rate" [hotelStars]="hotel.stars" [title]='hotel.name' [price]='hotel.rooms[0].price' class='wrap-item'
