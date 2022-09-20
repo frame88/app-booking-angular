@@ -1,16 +1,22 @@
 // SEARCH BAR
-input[type=text] {
+.searchbar {
+  transform: translateY(2em);
+}
+
+.form[type=text] {
   width: 20%;
-  border: 5px solid #3C4FFF;
   border-radius: 0 15px 15px 0;
   font-size: 16px;
   background-color: white;
   padding: 12px 20px 12px 40px;
   border-radius: 15px;
+  border: 0;
+  outline: none;
 }
 
-.form {
-  outline: none;
+.cici {
+  border: 5px solid #2996FB;
+  border-radius: 15px;
 }
 
 .label {
@@ -18,6 +24,7 @@ input[type=text] {
   border-radius: 15px 0 0 15px;
   display: none;
 }
+
 
 
 // HOVER SEARCH BAR
@@ -32,18 +39,14 @@ input[type=text] {
   transition: 0.6s;
 }
 
-.jumbotron {
-    transform: translateY(2em);
-  }
-
-.jumbotron:hover .label {
+.searchbar:hover .label {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1em;
 }
 
-.jumbotron:hover .form {
+.searchbar:hover .form {
   display: block;
   border-radius: 0 15px 15px 0;
 }
