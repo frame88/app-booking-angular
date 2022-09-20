@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Hotel } from '../../models/IHotel';
 
 @Component({
   selector: 'app-hotel-card',
@@ -8,6 +9,11 @@ import { Component, Input } from '@angular/core';
 })
 export class HotelCardComponent {
   stars: number[] = [1, 2, 3,4,5];
-  @Input() hotelName: string | undefined;
+  @Input() title: string | undefined;
+  @Input() hotelStars: number | undefined;
+  @Input() rating: number |undefined;
+  @Input() price: number | undefined;
+  @Input() city: string | undefined;
+
 
 }
