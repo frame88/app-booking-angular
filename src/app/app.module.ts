@@ -22,7 +22,7 @@ import { SearchModule } from './features/search/search.module';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
-    SearchModule
+    SearchModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

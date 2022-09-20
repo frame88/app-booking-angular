@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { Auth } from 'src/app/model/auth';
+
 
 
 @Component({
@@ -33,7 +33,7 @@ import { Auth } from 'src/app/model/auth';
   styles: [
   ]
 })
-export class LoginComponent {
+export class LoginFormComponent {
 
   constructor(public auth: AuthService) { }
 

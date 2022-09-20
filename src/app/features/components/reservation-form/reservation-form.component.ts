@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
@@ -58,7 +58,7 @@ import { CartService } from 'src/app/core/services/cart.service';
   styles: [
   ]
 })
-export class ReservationComponent {
+export class ReservationFormComponent {
 
   constructor(public cart: CartService) { }
 
