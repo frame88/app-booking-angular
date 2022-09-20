@@ -4,31 +4,19 @@ import { AuthService } from 'src/app/core/services/auth.service';
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-form',
   template: `
-    <div class="wrapper centered">
+  
+    <form #f="ngForm" (submit)="auth.login(f.value)">
 
-      <div class="card vh-centered" [ngClass]="{'error': auth.error}">
+      <input type="text" required placeholder="Username" [ngModel] name="user" >
 
-        <div class="title">Login</div>
+      <input type="password" required placeholder="password" [ngModel] name="pass" >
 
-        <div class="content">
+      <button type="submit" [disabled]="f.invalid">SIGN-IN</button>
 
-          <form #f="ngForm" (submit)="auth.login(f.value)">
+    </form>
 
-            <input type="text" required placeholder="Username" [ngModel] name="user" >
-
-            <input type="password" required placeholder="password" [ngModel] name="pass" >
-
-            <button type="submit" [disabled]="f.invalid">SIGN-IN</button>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </div>
   `,
   styles: [
   ]

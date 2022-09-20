@@ -10,9 +10,12 @@ import { ReviewFormComponent } from '../review-form/review-form.component';
   declarations: [
     ReviewFormComponent
   ],
+  exports: [
+    ReviewFormComponent
+  ],
   imports: [
     ReactiveFormsModule,
     CommonModule
   ]
 })
-export class ReviewModule{}
+export class ReviewFormModule{}

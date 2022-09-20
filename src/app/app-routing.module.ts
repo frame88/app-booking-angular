@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { CartComponent } from './features/cart/cart.component';
 import { LoginComponent } from './features/login/login.component';
 

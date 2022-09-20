@@ -9,12 +9,18 @@ import { SharedModule } from './shared/shared.module';
 import { CartComponent } from './features/cart/cart.component';
 import { LoginComponent } from './features/login/login.component';
 import { SearchModule } from './features/search/search.module';
+import { LoginFormModule } from './features/components/login-form/login-form.module';
+import { ContactFormModule } from './features/components/contact-form/contact-form.module';
+import { ReservationFormComponent } from './features/components/reservation-form/reservation-form.component';
+import { ReviewFormModule } from './features/components/review-form/review-form.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
     LoginComponent,
+    ReservationFormComponent
+
   ],
   imports: [
     BrowserModule,
@@ -23,6 +29,9 @@ import { SearchModule } from './features/search/search.module';
     CoreModule,
     SharedModule,
     SearchModule,
+    LoginFormModule,
+    ContactFormModule,
+    ReviewFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

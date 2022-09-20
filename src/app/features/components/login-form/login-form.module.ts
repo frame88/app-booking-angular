@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form.component';
@@ -7,9 +8,13 @@ import { LoginFormComponent } from './login-form.component';
   declarations: [
     LoginFormComponent
   ],
+  exports: [
+    LoginFormComponent
+  ],
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ]
 })
 export class LoginFormModule {}

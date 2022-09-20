@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ContactFormComponent } from './contact-form.component';
 
 
@@ -7,8 +8,16 @@ import { ContactFormComponent } from './contact-form.component';
   declarations: [
     ContactFormComponent
   ],
+  exports: [
+    ContactFormComponent
+  ],
   imports: [
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    // { provide: MdDialogRef, useValue: {} }, --> deprecated
+    { provide: MatDialogRef, useValue: {} }
+]
 })
-export class ContactModule {}
+export class ContactFormModule {}
