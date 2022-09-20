@@ -9,12 +9,16 @@ import { SharedModule } from './shared/shared.module';
 import { CartComponent } from './features/cart/cart.component';
 import { LoginComponent } from './features/login/login.component';
 import { SearchModule } from './features/search/search.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
     LoginComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { SearchModule } from './features/search/search.module';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
-    SearchModule,
+    HttpClientModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
