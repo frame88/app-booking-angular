@@ -13,6 +13,9 @@ import { LoginFormModule } from './features/components/login-form/login-form.mod
 import { ContactFormModule } from './features/components/contact-form/contact-form.module';
 import { ReservationFormComponent } from './features/components/reservation-form/reservation-form.component';
 import { ReviewFormModule } from './features/components/review-form/review-form.module';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { ReviewFormModule } from './features/components/review-form/review-form.
     CartComponent,
     LoginComponent,
     ReservationFormComponent
+
 
   ],
   imports: [
@@ -32,6 +36,7 @@ import { ReviewFormModule } from './features/components/review-form/review-form.
     LoginFormModule,
     ContactFormModule,
     ReviewFormModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
