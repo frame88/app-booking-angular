@@ -14,7 +14,7 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
   styles: [
   ]
 })
-export class ContactComponent {
+export class ContactFormComponent {
 
   contactForm: FormGroup = this.fb.group({
     email: ['', Validators.required, ],

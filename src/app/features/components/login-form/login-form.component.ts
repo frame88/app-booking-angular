@@ -33,7 +33,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styles: [
   ]
 })
-export class LoginComponent {
+export class LoginFormComponent {
 
   constructor(public auth: AuthService) { }
 
