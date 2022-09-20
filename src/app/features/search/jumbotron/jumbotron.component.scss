@@ -12,6 +12,7 @@
   border-radius: 15px;
   border: 0;
   outline: none;
+  border: 3px solid #2996FB;
 }
 
 .cici {
@@ -60,6 +61,7 @@
   background-size: cover;
   border-radius: 15px;
   position: relative;
+  z-index: -1;
 }
 
 #aereo {
