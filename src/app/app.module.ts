@@ -14,6 +14,10 @@ import { ReviewFormModule } from './features/components/review-form/review-form.
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './features/login/login.module';
 import { CartModule } from './features/cart/cart.module';
+import { Hotelview3Component } from './features/hotelview3/hotelview3.component';
+import { PrezziComponent } from './features/hotelview3/prezzi/prezzi.component';
+import { MappaComponent } from './features/hotelview3/mappa/mappa.component';
+import { DescrizioneComponent } from './features/hotelview3/descrizione/descrizione.component';
 
 
 
@@ -21,7 +25,11 @@ import { CartModule } from './features/cart/cart.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ReservationFormComponent
+    ReservationFormComponent,
+    Hotelview3Component,
+    PrezziComponent,
+    MappaComponent,
+    DescrizioneComponent
   ],
   imports: [
     BrowserModule,
