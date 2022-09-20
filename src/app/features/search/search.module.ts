@@ -12,7 +12,8 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
     JumbotronComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ]
 })
 export class SearchModule { }
