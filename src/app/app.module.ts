@@ -6,19 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { CartComponent } from './features/cart/cart.component';
-import { LoginComponent } from './features/login/login.component';
 import { SearchModule } from './features/search/search.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginModule } from './features/login/login.module';
+import { CartModule } from './features/cart/cart.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CartComponent,
-    LoginComponent,
-
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     SharedModule,
     HttpClientModule,
-    SearchModule
+    SearchModule,
+    LoginModule,
+    CartModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
