@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DescriptionComponent } from './description/description.component';
 import { GooglemapComponent } from './googlemap/googlemap.component';
 import { PrezziComponent } from './prezzi/prezzi.component';
+import { HotelviewComponent } from './hotelview.component';
 
 
 
@@ -10,7 +11,8 @@ import { PrezziComponent } from './prezzi/prezzi.component';
   declarations: [
     DescriptionComponent,
     GooglemapComponent,
-    PrezziComponent
+    PrezziComponent,
+    HotelviewComponent
   ],
   imports: [
     CommonModule
