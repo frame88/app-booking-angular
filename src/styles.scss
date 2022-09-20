@@ -5,5 +5,10 @@
 .flex-wrap{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
+
+  .wrap-item{
+  margin: 0 10px;
 }
+}
+

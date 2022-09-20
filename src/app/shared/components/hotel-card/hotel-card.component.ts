@@ -13,6 +13,7 @@ export class HotelCardComponent {
   @Input() hotelStars: number | undefined;
   @Input() rating: number |undefined;
   @Input() price: number | undefined;
+  @Input() city: string | undefined;
 
 
 }
