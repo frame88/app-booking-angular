@@ -1,3 +1,7 @@
-<app-jumbotron></app-jumbotron>
+<app-jumbotron [search]="search"
+(searchHotels)="searchHotels($event)"></app-jumbotron>
 
-<app-hotel-card></app-hotel-card>
+<app-hotel-list [hotels]="hotels"
+[active]="active"
+[text]="text"
+(setActive)="setActive($event)"></app-hotel-list>

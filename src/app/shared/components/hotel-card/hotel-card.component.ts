@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hotel-card',
@@ -7,5 +7,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class HotelCardComponent {
-  stars: number[] = [1, 2, 3,4,5]
+  stars: number[] = [1, 2, 3,4,5];
+  @Input() hotelName: string | undefined;
+
 }
