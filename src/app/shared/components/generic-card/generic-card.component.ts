@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { CartItem } from 'src/app/model/cart-item';
 
 @Component({
 	selector: 'app-generic-card',
@@ -7,7 +6,7 @@ import { CartItem } from 'src/app/model/cart-item';
 
 		<div class="card gen-card">
 
-			<h5 class="title">{{title}}</h5>
+			<h5 class="title my-title">{{title}}</h5>
 
 			<div class="card-body">
 
@@ -24,6 +23,7 @@ import { CartItem } from 'src/app/model/cart-item';
 export class GenericCardComponent {
 
   @Input() title: string = '';
-  
+  @Input() outside: boolean = false;
+
 
 }

@@ -2,10 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'itk-reviews',
+  selector: 'app-review-form',
   template: `
 
-   <form [formGroup]='review' (submit)='sendReview.emit(review.value)'>
+   <form [formGroup]='review' (submit)='sendReview.emit(review.value)' *ngIf="review">  <!-- ngIf da togliere (?) -->
     <div formControlName="rating" class="" >
       <i class="icon"
         *ngFor="let star of starId; let i = index"

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
-  selector: 'app-reservation',
+  selector: 'app-reservation-form',
   template: `
     <div class="wrapper">
 

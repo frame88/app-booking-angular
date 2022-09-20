@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-contact-form',
   template: `
     <form [formGroup]="contactForm" (submit)="sendEmail(contactForm.value)">
       <input type="text" placeholder="Your email*" formControlName="email" >
