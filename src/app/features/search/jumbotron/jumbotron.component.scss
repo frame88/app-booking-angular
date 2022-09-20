@@ -9,48 +9,81 @@
   font-size: 16px;
   background-color: white;
   padding: 12px 20px 12px 40px;
-  border-radius: 15px;
+  border-radius: 0 15px 15px 0;
   border: 0;
   outline: none;
   border: 3px solid #2996FB;
+  width: 40%;
 }
 
-.cici {
-  border: 5px solid #2996FB;
-  border-radius: 15px;
-}
 
 .label {
   background-color: #3C4FFF;
   border-radius: 15px 0 0 15px;
-  display: none;
-}
-
-
-
-// HOVER SEARCH BAR
-
-.form:hover {
-  border-radius: 0 15px 15px 0;
-  outline: none;
-}
-
-.form:hover {
-  width: 60%;
-  transition: 0.6s;
-}
-
-.searchbar:hover .label {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1em;
 }
 
-.searchbar:hover .form {
-  display: block;
-  border-radius: 0 15px 15px 0;
-}
+
+
+
+
+
+// da utilizzare nelle altre pagine che non siano home
+// .searchbar {
+//   transform: translateY(2em);
+// }
+
+// .form[type=text] {
+//   width: 20%;
+//   border-radius: 0 15px 15px 0;
+//   font-size: 16px;
+//   background-color: white;
+//   padding: 12px 20px 12px 40px;
+//   border-radius: 15px;
+//   border: 0;
+//   outline: none;
+//   border: 3px solid #2996FB;
+// }
+
+// .cici {
+//   border: 5px solid #2996FB;
+//   border-radius: 15px;
+// }
+
+// .label {
+//   background-color: #3C4FFF;
+//   border-radius: 15px 0 0 15px;
+//   display: none;
+// }
+
+
+
+// // HOVER SEARCH BAR
+
+// .form:hover {
+//   border-radius: 0 15px 15px 0;
+//   outline: none;
+// }
+
+// .form:hover {
+//   width: 60%;
+//   transition: 0.6s;
+// }
+
+// .searchbar:hover .label {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1em;
+// }
+
+// .searchbar:hover .form {
+//   display: block;
+//   border-radius: 0 15px 15px 0;
+// }
 
 // copertina
 .palme {
