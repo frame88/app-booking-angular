@@ -1,10 +1,11 @@
 <div class="container-fluid mt-2">
-  <div class="container searchbar text-center d-flex justify-content-center">
+  <form [formGroup]="search" class="container searchbar text-center d-flex justify-content-center">
     <div class="label">
       <span class="text-light">dove vuoi andare:</span>
     </div>
-    <input placeholder="Cerca..." class="form" type="text">
-  </div>
+    <input placeholder="Cerca..." class="form" type="text" formControlName="text">
+    <button (click)="searchHotels.emit(search.value.text.toLowerCase())" type="submit">SEARCH</button>
+  </form>
 </div>
 
 <div class="container-fluid">
