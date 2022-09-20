@@ -59,12 +59,25 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
+  position: relative;
 }
 
 #aereo {
   width: 150px;
-  transform: translateY(5em);
   border: 5px solid white;
   border-radius: 50%;
-  //ritagliare png
+  animation: rotate 2s infinite;
+  position: absolute;
+  bottom: -22%;
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(359deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
