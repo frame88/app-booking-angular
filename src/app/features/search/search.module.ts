@@ -11,9 +11,6 @@ import { SearchComponent } from './search.component';
     JumbotronComponent,
     SearchComponent
   ],
-  exports:[
-    JumbotronComponent
-  ],
   imports: [
     CommonModule,
     SharedModule
