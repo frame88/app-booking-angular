@@ -42,10 +42,10 @@ export class SearchComponent  {
           //  this.setActive(this.hotels[0]);
          });
      }
-     setActive(hotel: Hotel){
-       this.active = hotel;
-       this.activeImage = hotel.images[0];
-     }
+    //  setActive(hotel: Hotel){
+    //    this.active = hotel;
+    //    this.activeImage = hotel.images[0];
+    //  }
 
 
 }

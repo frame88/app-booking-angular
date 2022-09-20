@@ -2,3 +2,8 @@
 // @import url(assets/styles/hotel.scss)
 @use "./assets/styles/hotel.scss";
 
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

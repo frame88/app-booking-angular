@@ -4,10 +4,13 @@ import { Hotel } from 'src/app/model/hotel';
 @Component({
   selector: 'app-hotel-list',
   template: `
-    <app-hotel-card  *ngFor="let hotel of hotels"
-    (click)="setActive.emit(hotel)"
+  <div class="flex-wrap">
+    <app-hotel-card *ngFor="let hotel of hotels" [rating]="hotel.rate" [hotelStars]="hotel.stars" [title]='hotel.name' [price]='hotel.rooms[0].price'
     >
     </app-hotel-card>
+  </div>
+
+
   `,
   styles: [
   ]
