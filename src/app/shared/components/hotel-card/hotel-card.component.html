@@ -11,16 +11,19 @@
     </div>
   </div>
   <div class="bottom-section">
-    <h2>
-      {{hotelName}}
-    </h2>
+    <h3>
+      {{title}}
+    </h3>
     <div class="stars">
       <div>
         <i class="icon ion-ios-star-outline"
         *ngFor="let star of stars ; let i = index"
+        [ngClass]="{
+          'ion-ios-star': i < this.hotelStars!,
+          'ion-ios-star-outline': i >= this.hotelStars!}"
         ></i>
-        <span>3.7</span>
-        <div class="price">a partire da <strong>116€</strong></div>
+        <span>{{rating}}</span>
+        <div class="price">a partire da <strong>{{price}}€</strong></div>
       </div>
     </div>
 

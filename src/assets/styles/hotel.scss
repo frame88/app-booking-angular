@@ -1,9 +1,13 @@
 .hotel-card{
-  margin-top: 10rem;
+  margin-top: 30px;
   max-width: 410px;
   border: 8px solid #CBCBCB;
   border-radius: 22px;
   box-shadow: -4px 4px 4px rgba(114, 114, 114, 0.5);
+  h3{
+    font-size: 24px;
+    margin:  10px 0;
+  }
 }
 .grid{
   display: grid;
@@ -52,3 +56,11 @@ img{
   border-color: #2996FB;
 }
 
+.hotel-container{
+  margin: 7rem 0 ;
+  h2{
+    margin-left: 20px;
+    font-size: 48px;
+  }
+
+}
