@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
-import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { FormsModule } from '@angular/forms';
+import { GenericCardComponent } from './components/generic-card/generic-card.component';
+
 
 
 
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     HotelCardComponent,
     GenericCardComponent,
+
   ],
   exports: [
     GenericCardComponent,
