@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hotelview3',
-  templateUrl: './hotelview3.component.html',
-  styleUrls: ['./hotelview3.component.scss']
+  templateUrl: './hotelview.component.html',
+  styleUrls: ['./hotelview.component.scss']
 })
-export class Hotelview3Component implements OnInit {
+export class HotelviewComponent implements OnInit {
 
   constructor() { }
 
