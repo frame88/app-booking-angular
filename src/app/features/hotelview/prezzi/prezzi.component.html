@@ -1,37 +1,17 @@
 
 <!-- prezzi -->
 <div class="container-hotel-price d-flex">
-  <div class="hotel-price text-center d-flex flex-column align-items-center justify-content-center first">
+  <div *ngFor="let room of rooms, let i = index" class="hotel-price text-center d-flex flex-column align-items-center justify-content-center"
+  [ngClass]="{'first': i == 0,
+'last': i == rooms!.length - 1  }">
     <div class="p-2 align-self-center">
       <i class="fa-solid fa-bed fs-3 p-2"></i>
     </div>
     <div class="gray-line"></div>
     <!-- <h3>{{tipologia}}</h3> -->
-    <h3>singola</h3>
-    <p class="price fs-3">34€</p>
+    <h3>{{room.label}}</h3>
+    <p class="price fs-3">{{room.price}}€</p>
     <button class="px-4">Prenota</button>
   </div>
-  <div class="hotel-price text-center d-flex flex-column align-items-center justify-content-center">
-    <div class="p-2 align-self-center">
-      <i class="fa-solid fa-bed fs-3 p-2"></i>
-      <i class="fa-solid fa-bed fs-3 p-2"></i>
-    </div>
-    <div class="gray-line"></div>
-    <!-- <h3>{{tipologia}}</h3> -->
-    <h3>doppia</h3>
-    <p class="price fs-3">69€</p>
-    <button class="px-4">Prenota</button>
-  </div>
-  <div class="hotel-price text-center d-flex flex-column align-items-center justify-content-center last">
-    <div class="p-2 align-self-center">
-      <i class="fa-solid fa-bed fs-3 p-2"></i>
-      <i class="fa-solid fa-bed fs-3 p-2"></i>
-      <i class="fa-solid fa-bed fs-3 p-2"></i>
-    </div>
-    <div class="gray-line"></div>
-    <!-- <h3>{{tipologia}}</h3> -->
-    <h3>tripla</h3>
-    <p class="price fs-3">107€</p>
-    <button class="px-4 mb-3">Prenota</button>
-  </div>
+
 </div>
