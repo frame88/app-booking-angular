@@ -10,13 +10,14 @@ import { SearchModule } from './features/search/search.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './features/login/login.module';
 import { CartModule } from './features/cart/cart.module';
+import { HotelviewModule } from './features/hotelview/hotelview.module';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,7 @@ import { CartModule } from './features/cart/cart.module';
     SearchModule,
     LoginModule,
     CartModule,
-
+    HotelviewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

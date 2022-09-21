@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-hotelview',
+  selector: 'app-hotelview3',
   templateUrl: './hotelview.component.html',
   styleUrls: ['./hotelview.component.scss']
 })
