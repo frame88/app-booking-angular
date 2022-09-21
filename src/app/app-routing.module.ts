@@ -7,7 +7,7 @@ const routes: Routes = [
   import('./features/search/search.module').then(m => m.SearchModule)},
   { path:'login', loadChildren:() => import('./features/login/login.module').then( m=> m.LoginModule) },
   { path:'cart', loadChildren:() => import('./features/cart/cart.module').then(m => m.CartModule)},
-  { path:'secondpage', component: HotelviewComponent},
+  { path:'secondpage', component: HotelviewComponent },
   // { path:'**', redirectTo:'login'},
 
 ];
