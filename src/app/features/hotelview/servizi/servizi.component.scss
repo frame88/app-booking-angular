@@ -1,0 +1,29 @@
+$main-color: #2996FB;
+
+li {
+  margin: 1em;
+}
+
+.container-servizi {
+  display: inline-block;
+}
+
+.lista-servizi {
+  border: 1px solid rgb(197, 197, 197);
+  padding: 1em;
+  border-radius: 15px;
+}
+
+#contatta {
+  border: 1px solid $main-color;
+  background-color: white;
+  color: $main-color;
+  border-radius: 15px;
+  padding: 0.5em;
+}
+
+#contatta:hover {
+  background-color: $main-color;
+  transition: 0.3s;
+  color: white;
+}

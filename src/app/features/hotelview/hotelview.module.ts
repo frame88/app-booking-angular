@@ -9,6 +9,8 @@ import { HotelviewComponent } from './hotelview.component';
 import { MappaComponent } from './mappa/mappa.component';
 import { PrezziComponent } from './prezzi/prezzi.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import { ServiziComponent } from './servizi/servizi.component';
+import { ArrowscrollComponent } from './arrowscroll/arrowscroll.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +19,9 @@ import { ReviewFormComponent } from './review-form/review-form.component';
       ContactFormComponent,
       DescrizioneComponent,
       MappaComponent,
-      PrezziComponent
+      PrezziComponent,
+      ServiziComponent,
+      ArrowscrollComponent
     ],
     exports: [
       HotelviewComponent
