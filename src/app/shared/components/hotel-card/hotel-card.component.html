@@ -1,4 +1,5 @@
-<div class="hotel-card">
+
+<div class="hotel-card" >
   <div class="top-section slider grid">
     <div class="main-img">
       <img src="{{images![0]}}" height="147px" alt="">
@@ -7,23 +8,25 @@
       <img *ngFor="let img of images" src="{{img}}" height="49px"   alt="">
     </div>
   </div>
-  <div class="bottom-section">
-    <h3>
-      {{title}}
-    </h3>
-    <div class="stars">
-      <div>
-        <i class="icon ion-ios-star-outline"
-        *ngFor="let star of stars ; let i = index"
-        [ngClass]="{
-          'ion-ios-star': i < this.hotelStars!,
-          'ion-ios-star-outline': i >= this.hotelStars!}"
-        ></i>
-        <span>{{rating}}</span>
-        <div class="price">a partire da <strong>{{price}}€</strong></div>
+  <a [routerLink]="['/hotel', id]">
+    <div class="bottom-section">
+      <h3>
+        {{title}}
+      </h3>
+      <div class="stars">
+        <div>
+          <i class="icon ion-ios-star-outline"
+          *ngFor="let star of stars ; let i = index"
+          [ngClass]="{
+            'ion-ios-star': i < this.hotelStars!,
+            'ion-ios-star-outline': i >= this.hotelStars!}"
+          ></i>
+          <span>{{rating}}</span>
+          <div class="price">a partire da <strong>{{price}}€</strong></div>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -39,3 +42,4 @@
     </div>
   </div>
 </div>
+

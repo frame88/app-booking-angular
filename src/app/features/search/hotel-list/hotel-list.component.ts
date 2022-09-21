@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Hotel } from 'src/app/model/hotel';
 
 @Component({
@@ -7,8 +7,7 @@ import { Hotel } from 'src/app/model/hotel';
   <div class="hotel-container">
     <h2>{{hotels?.length}} Hotel in {{text}}</h2>
     <div class="flex-wrap">
-
-      <app-hotel-card [images]="hotel.images" [city]='hotel.city' *ngFor="let hotel of hotels" [rating]="hotel.rate" [hotelStars]="hotel.stars" [title]='hotel.name' [price]='hotel.rooms[0].price' class='wrap-item'>
+      <app-hotel-card [images]="hotel.images" [city]='hotel.city' *ngFor="let hotel of hotels" [rating]="hotel.rate" [hotelStars]="hotel.stars" [id]='hotel.id' [title]='hotel.name' [price]='hotel.rooms[0].price' class='wrap-item'>
       </app-hotel-card>
     </div>
   </div>

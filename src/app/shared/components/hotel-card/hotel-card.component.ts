@@ -14,6 +14,7 @@ export class HotelCardComponent {
   @Input() price: number | undefined;
   @Input() city: string | undefined;
   @Input() images: string[] | undefined
+  @Input() id: number | undefined
 
 
 }
