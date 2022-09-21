@@ -12,7 +12,7 @@ import { FormGroup } from '@angular/forms';
           <span class="text-light">dove vuoi andare:</span>
         </div>
         <input placeholder="Cerca..." class="form" type="text" formControlName="text">
-        <button (click)="searchHotels.emit(search.value.text.toLowerCase())" type="submit">SEARCH</button>
+        <button id="search" (click)="searchHotels.emit(search.value.text.toLowerCase())" type="submit">SEARCH</button>
       </form>
     </div>
 
