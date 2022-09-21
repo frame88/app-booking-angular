@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HotelviewComponent } from './features/hotelview/hotelview.component';
 
 const routes: Routes = [
   { path:'search',loadChildren: () =>
   import('./features/search/search.module').then(m => m.SearchModule)},
   { path:'login', loadChildren:() => import('./features/login/login.module').then( m=> m.LoginModule) },
   { path:'cart', loadChildren:() => import('./features/cart/cart.module').then(m => m.CartModule)},
-  { path:'secondpage', component: HotelviewComponent },
+  { path:'hotel/:id', loadChildren:() => import('./features/hotelview/hotelview.module').then(m => m.HotelviewModule)},
   // { path:'**', redirectTo:'login'},
 
 ];
