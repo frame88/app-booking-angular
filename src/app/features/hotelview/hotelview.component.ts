@@ -18,18 +18,9 @@ export class HotelviewComponent implements OnInit {
   errorMessage = '';
   hotel: Hotel | undefined;
 
-<<<<<<< HEAD
   pageTitle = 'Hotel Detail';
-  errorMessage = '';
-  hotel: Hotel | undefined;
-=======
-  constructor(
-    private fb:FormBuilder,
-    private http: HttpClient,
-    private router:Router,
-    public auth: AuthService,
-  ) { }
->>>>>>> 63fabfedfc487ff4ca6b65d19e2b7035eae38a38
+
+
 
   constructor(private route: ActivatedRoute,
               private router: Router,
