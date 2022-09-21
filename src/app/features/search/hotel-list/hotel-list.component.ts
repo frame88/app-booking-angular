@@ -1,16 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Hotel } from 'src/app/model/hotel';
 
 @Component({
   selector: 'app-hotel-list',
   template: `
   <div class="hotel-container">
-    <h2>Hotel in {{text}}</h2>
+    <h2>{{hotels?.length}} Hotel in {{text}}</h2>
     <div class="flex-wrap">
-
-      <app-hotel-card [city]='hotel.city' *ngFor="let hotel of hotels" [rating]="hotel.rate" [hotelStars]="hotel.stars" [title]='hotel.name' [price]='hotel.rooms[0].price' class='wrap-item'
-      >
-
+      <app-hotel-card [images]="hotel.images" [city]='hotel.city' *ngFor="let hotel of hotels" [rating]="hotel.rate" [hotelStars]="hotel.stars" [id]='hotel.id' [title]='hotel.name' [price]='hotel.rooms[0].price' class='wrap-item'>
       </app-hotel-card>
     </div>
   </div>
