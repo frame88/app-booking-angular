@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Room } from 'src/app/model/hotel';
 
 @Component({
   selector: 'app-prezzi',
   templateUrl: './prezzi.component.html',
   styleUrls: ['./prezzi.component.scss']
 })
-export class PrezziComponent implements OnInit {
+export class PrezziComponent{
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() rooms: Room[] | undefined
 
 }

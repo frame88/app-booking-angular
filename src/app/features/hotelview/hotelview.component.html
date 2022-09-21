@@ -1,17 +1,18 @@
   <app-arrowscroll></app-arrowscroll>
   <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="col-6">
-      <app-descrizione></app-descrizione>
+      <app-descrizione [name]='hotel!.name'></app-descrizione>
       <app-servizi></app-servizi>
     </div>
     <div class="col-6">
-      <app-mappa></app-mappa>
+      <app-mappa [address]='hotel!.location.address'></app-mappa>
     </div>
   </div>
 
-  <div class="container container-prezzi my-5 d-flex justify-content-center">
-    <app-prezzi></app-prezzi>
-  </div>
+    <div class="container container-prezzi my-5 d-flex justify-content-center">
+      <app-prezzi [rooms]="hotel!.rooms"></app-prezzi>
+
+    </div>
 
   <app-generic-card title="Lascia una recensione">
     <app-review-form
@@ -29,7 +30,7 @@
   <app-generic-card title="Hotel Termini">
 
     <app-contact-form></app-contact-form>
-    
+
   </app-generic-card>
 
 

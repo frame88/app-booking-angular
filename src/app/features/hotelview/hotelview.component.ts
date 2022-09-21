@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, Observable } from 'rxjs';
+import { HotelService } from 'src/app/services/hotel.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { catchError, of } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { Hotel } from 'src/app/model/hotel';
@@ -13,15 +15,35 @@ import { Review } from 'src/app/model/review';
   styleUrls: ['./hotelview.component.scss']
 })
 export class HotelviewComponent implements OnInit {
+  errorMessage = '';
+  hotel: Hotel | undefined;
 
-  constructor(
-    private fb:FormBuilder,
-    private http: HttpClient,
-    private router:Router,
-    public auth: AuthService,
-  ) { }
+  pageTitle = 'Hotel Detail';
 
+
+
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private hotelService: HotelService,
+              private fb:FormBuilder,
+              private http: HttpClient,
+              public auth: AuthService,
+              ) {
+              }
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if (id) {
+      this.getHotel(id);
+    }
+
+  }
+
+  getHotel(id: number): void {
+    this.hotelService.getHotel(id).subscribe({
+      next: ((hotel) => this.hotel = hotel),
+      error: err => this.errorMessage = err
+    });
+
   }
 
   // Reviews
