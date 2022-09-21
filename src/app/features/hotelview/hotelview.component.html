@@ -13,3 +13,25 @@
       <app-prezzi [rooms]="hotel!.rooms"></app-prezzi>
 
     </div>
+
+  <app-generic-card title="Lascia una recensione">
+    <app-review-form
+    (hoverStar)="onHoverStar($event)"
+    (starLeave)="onStarLeave()"
+    (setRating)="onSetRating($event)"
+    [review]="review"
+    (sendReview)="sendReview($event)"
+
+    [starId]="stars"
+    [rating]="hover || rating"
+    ></app-review-form>
+  </app-generic-card>
+
+  <app-generic-card title="Hotel Termini">
+
+    <app-contact-form></app-contact-form>
+
+  </app-generic-card>
+
+
+

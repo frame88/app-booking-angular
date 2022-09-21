@@ -1,10 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { Hotel } from 'src/app/model/hotel';
 import { HotelService } from 'src/app/services/hotel.service';
-
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { catchError, of } from 'rxjs';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { Hotel } from 'src/app/model/hotel';
+import { Review } from 'src/app/model/review';
 
 @Component({
   selector: 'app-hotelview3',
@@ -12,14 +15,29 @@ import { HotelService } from 'src/app/services/hotel.service';
   styleUrls: ['./hotelview.component.scss']
 })
 export class HotelviewComponent implements OnInit {
-
-  pageTitle = 'Hotel Detail';
   errorMessage = '';
   hotel: Hotel | undefined;
 
+<<<<<<< HEAD
+  pageTitle = 'Hotel Detail';
+  errorMessage = '';
+  hotel: Hotel | undefined;
+=======
+  constructor(
+    private fb:FormBuilder,
+    private http: HttpClient,
+    private router:Router,
+    public auth: AuthService,
+  ) { }
+>>>>>>> 63fabfedfc487ff4ca6b65d19e2b7035eae38a38
+
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private hotelService: HotelService) {
+              private hotelService: HotelService,
+              private fb:FormBuilder,
+              private http: HttpClient,
+              public auth: AuthService,
+              ) {
               }
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -37,5 +55,48 @@ export class HotelviewComponent implements OnInit {
 
   }
 
+  // Reviews
+  active: Hotel | undefined;
+  rating: number = 0;
+  hover:number = 0;
+  stars: number[] = [1, 2, 3,4,5]
+
+  review: FormGroup = this.fb.group({
+    rating:['', Validators.required],
+    msg: ['']
+  })
+
+  onHoverStar( i:number){
+    this.hover =  this.stars[i - 1]
+    }
+
+  onStarLeave() {
+    this.hover = 0
+  }
+
+  onSetRating(i:number){
+    this.rating = this.stars[i - 1];
+    this.review.controls['rating'].setValue(this.rating);
+  }
+
+  sendReview({msg}: { msg: string}): void{
+    let params: Review = {
+      stars: this.rating,
+      review: msg,
+      hotel: this.active?.name,
+      user: this.auth.data?.name
+    }
+    console.log(this.review.getRawValue() )
+    this.http.post<Review>('http://localhost:3000/reviews', params)
+    .pipe(
+      catchError((err)=> of(err))
+    )
+    .subscribe(
+    );
+    console.log(params)
+    this.rating = 0;
+    this.review.reset()
+    //this.router.navigateByUrl('search/success')
+  }
 
 }
