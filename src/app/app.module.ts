@@ -7,10 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { SearchModule } from './features/search/search.module';
-import { LoginFormModule } from './features/components/login-form/login-form.module';
-import { ContactFormModule } from './features/components/contact-form/contact-form.module';
-import { ReservationFormComponent } from './features/components/reservation-form/reservation-form.component';
-import { ReviewFormModule } from './features/components/review-form/review-form.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './features/login/login.module';
 import { CartModule } from './features/cart/cart.module';
@@ -25,7 +21,6 @@ import { DescrizioneComponent } from './features/hotelview3/descrizione/descrizi
 @NgModule({
   declarations: [
     AppComponent,
-    ReservationFormComponent,
     Hotelview3Component,
     PrezziComponent,
     MappaComponent,
@@ -38,9 +33,6 @@ import { DescrizioneComponent } from './features/hotelview3/descrizione/descrizi
     CoreModule,
     SharedModule,
     SearchModule,
-    LoginFormModule,
-    ContactFormModule,
-    ReviewFormModule,
     HttpClientModule,
     SearchModule,
     LoginModule,
