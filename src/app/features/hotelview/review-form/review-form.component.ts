@@ -5,8 +5,8 @@ import { FormGroup } from '@angular/forms';
   selector: 'app-review-form',
   template: `
 
-   <form [formGroup]='review' (submit)='sendReview.emit(review.value)' *ngIf="review">  <!-- ngIf da togliere (?) -->
-    <div formControlName="rating" class="" >
+   <form [formGroup]='review' (submit)='sendReview.emit(review.value)'>  <!-- ngIf da togliere (?) -->
+    <div formControlName="rating">
       <i class="icon"
         *ngFor="let star of starId; let i = index"
         [ngClass]="{'ion-ios-star': rating >= star,
@@ -17,16 +17,18 @@ import { FormGroup } from '@angular/forms';
         (click)='onSetRating(i)'
         ></i>
     </div>
-    <textarea cols="20" rows="4" placeholder="Your message*" formControlName="msg"></textarea>
+    <label for="review" class="form-label text-secondary">Recensione</label>
+    <textarea cols="20" rows="4" class="form-control" id="review" formControlName="msg"></textarea>
     <div class='error' *ngIf='this.review.controls["msg"].errors'>
       Inserisci un messaggio
     </div>
     <div class='error' *ngIf='this.review.controls["rating"].errors'>
       Inserisci il voto
     </div>
-    <button [disabled]="review.invalid" type="submit">SEND</button>
+    <button [disabled]="review.invalid" type="submit" class="btn btn-outline-info mt-2">SEND</button>
    </form>
-  `
+  `,
+  styleUrls: ['./review-form.component.scss']
 })
 export class ReviewFormComponent {
   @Input() starId!: number[]
