@@ -2,26 +2,29 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    LoginFormComponent
   ],
 
   imports: [
     CommonModule,
     SharedModule,
-    ReactiveFormsModule,
+    FormsModule,
     RouterModule. forChild([
       { path:'', component: LoginComponent }
     ])
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    LoginFormComponent
   ]
 })
 export class LoginModule { }
