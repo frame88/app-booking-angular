@@ -1,14 +1,17 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contact-form',
   template: `
-    <form [formGroup]="contactForm" (submit)="sendEmail(contactForm.value)">
-      <input type="text" placeholder="Your email*" formControlName="email" >
-      <textarea cols="20" rows="6" placeholder="Your message*" formControlName="msg"></textarea>
-      <button  type="submit" [disabled]="contactForm.invalid">SEND</button>
+    <form [formGroup]="contactForm" (submit)="sendEmail()">
+
+      <label for="email" class="form-label text-secondary">La tua email</label>
+      <input type="text" class="form-control" required id="email" formControlName="email" >
+
+      <label for="msg" class="form-label text-secondary mt-3">Messaggio</label>
+      <textarea cols="20" rows="6" class="form-control" id="msg" formControlName="msg"></textarea>
+      <button  type="submit" [disabled]="contactForm.invalid" class="cstm-btn px-5">SEND</button>
     </form>
   `,
   styles: [
@@ -21,10 +24,10 @@ export class ContactFormComponent {
     msg: ['', Validators.required],
   })
 
-  constructor( private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: any){}
+  constructor( private fb: FormBuilder){}
 
-  sendEmail({email, msg}: {email: string, msg: string}): void{
-    console.log(`Inviato: ${email}, ${msg} ${this.data.hotelEmail}`);
+  sendEmail(): void{
+    console.log(`Inviato`);
   }
 
 }

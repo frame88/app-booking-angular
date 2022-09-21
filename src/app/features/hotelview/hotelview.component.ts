@@ -32,7 +32,7 @@ export class HotelviewComponent implements OnInit {
 
   review: FormGroup = this.fb.group({
     rating:['', Validators.required],
-    msg: ['', Validators.required]
+    msg: ['']
   })
 
   onHoverStar( i:number){
@@ -62,9 +62,10 @@ export class HotelviewComponent implements OnInit {
     )
     .subscribe(
     );
+    console.log(params)
     this.rating = 0;
     this.review.reset()
-    this.router.navigateByUrl('search/success')
+    //this.router.navigateByUrl('search/success')
   }
 
 }

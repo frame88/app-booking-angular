@@ -64,3 +64,24 @@ img{
   }
 
 }
+
+.cstm-btn {
+
+  color: #2996FB;
+  background-color: white;
+  border-color: #2996FB;
+  margin: 30px 50% 10px;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  border-style: solid;
+
+  &:hover {
+
+    background-color: #2996FB;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}
