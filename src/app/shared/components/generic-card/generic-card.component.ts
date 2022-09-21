@@ -17,8 +17,7 @@ import { Component, Input } from '@angular/core';
 		</div>
 
 	`,
-	styles: [
-	]
+	styleUrls: ['./generic-card.component.scss']
 })
 export class GenericCardComponent {
 
