@@ -9,6 +9,21 @@
     </div>
   </div>
 
-    <div class="container container-prezzi my-5 d-flex justify-content-center">
-      <app-prezzi></app-prezzi>
-    </div>
+  <div class="container container-prezzi my-5 d-flex justify-content-center">
+    <app-prezzi></app-prezzi>
+  </div>
+
+  <app-generic-card title="Lascia una recensione">
+    <app-review-form
+    (hoverStar)="onHoverStar($event)"
+    (starLeave)="onStarLeave()"
+    (setRating)="onSetRating($event)"
+    [review]="review"
+    (sendReview)="sendReview($event)"
+
+    [starId]="stars"
+    [rating]="hover || rating"
+    ></app-review-form>
+  </app-generic-card>
+
+
