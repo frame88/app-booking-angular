@@ -23,6 +23,7 @@ export class SearchComponent  {
      text: string = 'roma';
      hotels: Hotel[] | undefined;
      active: Hotel | undefined;
+     status: boolean = false;
 
      search: FormGroup = this.fb.group({
        text: ['Roma']
@@ -40,6 +41,9 @@ export class SearchComponent  {
              console.log(res)
              this.hotels = res;
           //  this.setActive(this.hotels[0]);
+
+            this.status = !this.status;
+
          });
      }
     //  setActive(hotel: Hotel){
