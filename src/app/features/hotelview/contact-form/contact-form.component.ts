@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       <input type="text" class="form-control" required id="email" formControlName="email" >
 
       <label for="msg" class="form-label text-secondary mt-3">Messaggio</label>
-      <textarea cols="20" rows="6" class="form-control" id="msg" formControlName="msg"></textarea>
+      <textarea cols="20" rows="3" class="form-control" id="msg" formControlName="msg"></textarea>
       <button  type="submit" [disabled]="contactForm.invalid" class="cstm-btn px-5">SEND</button>
     </form>
   `,
