@@ -6,7 +6,7 @@
   "hotels": [
     {
       "id": 1,
-      "city": "milan",
+      "city": "milano",
       "name": "Hotel Rockstar",
       "services": [
         "alarm", "beer", "car", "heart-empty", "train", "restaurant", "paw", "easel", "cafe"
@@ -33,7 +33,7 @@
     },
     {
       "id": 2,
-      "city": "milan",
+      "city": "milano",
       "name": "Hotel Best Western",
       "services": [
         "briefcase","train", "paw", "restaurant", "alarm", "car"
@@ -59,7 +59,7 @@
     },
     {
       "id": 3,
-      "city": "milan",
+      "city": "milano",
       "name": "Albergo Al Duomo",
       "services": [
         "paw", "restaurant", "alarm", "car"
@@ -85,7 +85,7 @@
     },
     {
       "id": 4,
-      "city": "milan",
+      "city": "milano",
       "name": "Hotel Venini",
       "services": [
         "briefcase","train", "paw", "restaurant", "alarm", "car"
