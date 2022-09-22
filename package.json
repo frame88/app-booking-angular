@@ -23,6 +23,7 @@
     "@angular/router": "^14.0.0",
     "bootstrap": "^5.2.1",
     "font-awesome": "^4.7.0",
+    "ng-gallery": "^7.0.4",
     "rxjs": "~7.5.0",
     "zone.js": "~0.11.4"
   },

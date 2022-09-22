@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { RouterModule } from '@angular/router';
 import { PopupComponent } from './components/popup/popup.component';
+import { GalleryModule } from 'ng-gallery';
 
 
 
@@ -25,7 +26,8 @@ import { PopupComponent } from './components/popup/popup.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    GalleryModule
   ],
 })
 export class SharedModule {  }
