@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { RouterModule } from '@angular/router';
 import { PopupComponent } from './components/popup/popup.component';
+import { TakePipe } from './pipes/take.pipe';
 
 
 
@@ -15,12 +16,14 @@ import { PopupComponent } from './components/popup/popup.component';
     HotelCardComponent,
     GenericCardComponent,
     PopupComponent,
+    TakePipe,
 
   ],
   exports: [
     GenericCardComponent,
     HotelCardComponent,
-    PopupComponent
+    PopupComponent,
+    TakePipe
   ],
   imports: [
     CommonModule,

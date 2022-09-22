@@ -11,9 +11,11 @@ import { PrezziComponent } from './prezzi/prezzi.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import { ServiziComponent } from './servizi/servizi.component';
 import { ArrowscrollComponent } from './arrowscroll/arrowscroll.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
     declarations: [
+      GalleryComponent,
       HotelviewComponent,
       ReviewFormComponent,
       ContactFormComponent,
