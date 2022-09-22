@@ -4,7 +4,6 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
 import { FormsModule } from '@angular/forms';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { RouterModule } from '@angular/router';
-import { PopupComponent } from './components/popup/popup.component';
 
 
 
@@ -13,14 +12,12 @@ import { PopupComponent } from './components/popup/popup.component';
 @NgModule({
   declarations: [
     HotelCardComponent,
-    GenericCardComponent,
-    PopupComponent,
+    GenericCardComponent
 
   ],
   exports: [
     GenericCardComponent,
-    HotelCardComponent,
-    PopupComponent
+    HotelCardComponent
   ],
   imports: [
     CommonModule,
