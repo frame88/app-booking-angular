@@ -68,4 +68,15 @@ export class HotelviewComponent implements OnInit {
     //this.router.navigateByUrl('search/success')
   }
 
+  //contacts
+
+  contacts: boolean = false
+
+  openContact(i: boolean) {
+
+    this.contacts = i
+    console.log(this.contacts)
+
+  }
+
 }

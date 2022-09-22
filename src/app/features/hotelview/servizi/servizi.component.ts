@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-servizi',
@@ -10,6 +10,16 @@ export class ServiziComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  contactWindow: boolean = false
+  @Output() openContact:EventEmitter<boolean> = new EventEmitter()
+
+  onOpenContact() {
+
+    this.contactWindow = true;
+    this.openContact.emit(this.contactWindow)
+
   }
 
 }

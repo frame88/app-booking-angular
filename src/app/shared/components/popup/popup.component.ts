@@ -28,11 +28,7 @@ import {Component } from '@angular/core';
 
     template: `
 
-
-
-                <ng-content></ng-content>
-
-             
+          <ng-content></ng-content>
 
     `,
     //styleUrls: ['./popup.component.scss']
