@@ -1,11 +1,11 @@
 
 <div class="hotel-card" >
-  <div class="top-section slider grid"  >
+  <div class="top-section slider grid" (mouseenter)="changeImg()" (mouseleave)='stopCarousel()'>
     <div class="main-img">
-      <img src="{{images![0]}}" height="147px" alt="">
+      <img src="{{bigImg}}" height="147px" alt="">
     </div>
     <div class="small-img" >
-      <img *ngFor="let img of images, let i = index" src="{{images![i + 1]}}" height="49px"   alt="">
+      <img *ngFor="let img of slider" src="{{img}}" height="49px"   alt="">
     </div>
   </div>
   <a [routerLink]="['/hotel', id]">

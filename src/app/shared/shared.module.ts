@@ -4,7 +4,6 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
 import { FormsModule } from '@angular/forms';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { RouterModule } from '@angular/router';
-import { PopupComponent } from './components/popup/popup.component';
 import { GalleryModule } from 'ng-gallery';
 import { TakePipe } from './pipes/take.pipe';
 
@@ -16,14 +15,11 @@ import { TakePipe } from './pipes/take.pipe';
   declarations: [
     HotelCardComponent,
     GenericCardComponent,
-    PopupComponent,
-    TakePipe,
-
+    TakePipe
   ],
   exports: [
     GenericCardComponent,
     HotelCardComponent,
-    PopupComponent,
     TakePipe
   ],
   imports: [

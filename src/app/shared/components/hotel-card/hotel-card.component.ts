@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-hotel-card',
@@ -6,26 +6,62 @@ import { Component, Input} from '@angular/core';
   styles: [
   ]
 })
-export class HotelCardComponent {
+export class HotelCardComponent implements OnInit{
   stars: number[] = [1, 2, 3,4,5];
   @Input() title: string | undefined;
   @Input() hotelStars: number | undefined;
   @Input() rating: number |undefined;
   @Input() price: number | undefined;
   @Input() city: string | undefined;
-  @Input() images: string[] | undefined
-  @Input() id: number | undefined
+  @Input() images: string[] | undefined;
+  @Input() id: number | undefined;
 
   i: number  = 0;
   interval: any;
+  bigImg: string = '';
+  slider: string[] | undefined = [];
+
+
+
+  ngOnInit(): void {
+
+    if (this.images) {
+
+      this.bigImg = this.images[0];
+
+      this.slider = this.images
+
+      for (let i = 0; i < this.slider.length - 1; i++) {
+
+        this.slider[i] = this.slider[i + 1]
+
+      }
+
+      this.slider[this.slider.length - 1] = this.bigImg
+
+    }
+  }
+
 
   changeImg():void{
-   this.interval = setInterval(()=> {
-      this.i += 1
-      if(this.i >= this.images!.length){
-        this.i = 0
+    this.interval = setInterval(()=> {
+
+      if (this.slider) {
+
+        this.bigImg = this.slider[0];
+
+        for (let i = 0; i < this.slider.length - 1; i++) {
+
+          this.slider[i] = this.slider[i + 1]
+
+        }
+
+        this.slider[this.slider.length - 1] = this.bigImg
+
       }
-    },1000)
+
+
+    },2000)
 
   };
   stopCarousel():void{
