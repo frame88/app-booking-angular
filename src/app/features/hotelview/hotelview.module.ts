@@ -11,6 +11,7 @@ import { PrezziComponent } from './prezzi/prezzi.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import { ServiziComponent } from './servizi/servizi.component';
 import { ArrowscrollComponent } from './arrowscroll/arrowscroll.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { ArrowscrollComponent } from './arrowscroll/arrowscroll.component';
       FormsModule,
       RouterModule.forChild([
         {path: '', component: HotelviewComponent}
-      ])
+      ]),
+      MatIconModule
     ]
 })
 export class HotelviewModule {}
