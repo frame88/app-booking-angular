@@ -30,7 +30,8 @@ import { CartService } from 'src/app/core/services/cart.service';
           *ngIf="cart.items.length"
           type="submit"
           (click)="cart.proceed()"
-      ></button>
+          class="cstm-btn"
+      >Procedi</button>
 
       <br>
       <br>
@@ -38,7 +39,7 @@ import { CartService } from 'src/app/core/services/cart.service';
       <div class="horiz-grid">
 
           <div></div>
-          <em>{{cart.items.length}} item</em>
+          <em>{{cart.items.length}} items</em>
 
       </div>
 

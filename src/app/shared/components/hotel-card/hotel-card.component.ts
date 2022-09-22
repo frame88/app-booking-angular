@@ -61,7 +61,7 @@ export class HotelCardComponent implements OnInit{
       }
 
 
-    },2000)
+    },1000)
 
   };
   stopCarousel():void{

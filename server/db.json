@@ -26,9 +26,9 @@
       ],
       "email": "info@hotelrockstar.com",
       "rooms": [
-        { "label": "Single", "price": 89 },
-        { "label": "Double", "price": 99 },
-        { "label": "Triple", "price": 109 }
+        { "label": "Singola", "price": 89 },
+        { "label": "Doppia", "price": 99 },
+        { "label": "Tripla", "price": 109 }
       ]
     },
     {
@@ -53,8 +53,8 @@
       ],
       "email": "info@hotelbestwestern.com",
       "rooms": [
-        { "label": "Single", "price": 69 },
-        { "label": "Double", "price": 79 }
+        { "label": "Singola", "price": 69 },
+        { "label": "Doppia", "price": 79 }
       ]
     },
     {
@@ -79,8 +79,8 @@
       ],
       "email": "info@hotelduomo.com",
       "rooms": [
-        { "label": "Single", "price": 129 },
-        { "label": "Double", "price": 139 }
+        { "label": "Singola", "price": 129 },
+        { "label": "Doppia", "price": 139 }
       ]
     },
     {
@@ -105,8 +105,8 @@
       ],
       "email": "info@hotelbestwestern.com",
       "rooms": [
-        { "label": "Single", "price": 69 },
-        { "label": "Double", "price": 79 }
+        { "label": "Singola", "price": 69 },
+        { "label": "Doppia", "price": 79 }
       ]
     },
     {
@@ -131,9 +131,9 @@
       ],
       "email": "info@hotelroma.com",
       "rooms": [
-        { "label": "Single", "price": 89 },
-        { "label": "Double", "price": 99 },
-        { "label": "Triple", "price": 109 }
+        { "label": "Singola", "price": 89 },
+        { "label": "Doppia", "price": 99 },
+        { "label": "Tripla", "price": 109 }
       ]
     },
     {
@@ -158,9 +158,9 @@
       ],
       "email": "info@hotelroma.com",
       "rooms": [
-        { "label": "Single", "price": 112 },
-        { "label": "Double", "price": 129 },
-        { "label": "Triple", "price": 149 }
+        { "label": "Singola", "price": 112 },
+        { "label": "Doppia", "price": 129 },
+        { "label": "Tripla", "price": 149 }
       ]
     }
 
