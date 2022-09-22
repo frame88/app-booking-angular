@@ -1,17 +1,18 @@
   <app-arrowscroll></app-arrowscroll>
   <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="col-6">
-      <app-descrizione></app-descrizione>
+      <app-descrizione [name]='hotel!.name'></app-descrizione>
       <app-servizi (openContact)="openContact($event)"></app-servizi>
     </div>
     <div class="col-6">
-      <app-mappa></app-mappa>
+      <app-mappa [address]='hotel!.location.address'></app-mappa>
     </div>
   </div>
 
-  <div class="container container-prezzi my-5 d-flex justify-content-center">
-    <app-prezzi></app-prezzi>
-  </div>
+    <div class="container container-prezzi my-5 d-flex justify-content-center">
+      <app-prezzi [rooms]="hotel!.rooms"></app-prezzi>
+
+    </div>
 
   <app-generic-card title="Lascia una recensione" state="review closed">
     <app-review-form
@@ -37,6 +38,12 @@
   </div>
 
 
+<<<<<<< HEAD
+=======
+    <app-contact-form></app-contact-form>
+
+  </app-generic-card>
+>>>>>>> 9a1064a182236a08503bf6debcc05ebc3ba73456
 
 
 
