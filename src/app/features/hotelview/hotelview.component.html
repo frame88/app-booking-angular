@@ -2,7 +2,7 @@
   <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="col-6">
       <app-descrizione [name]='hotel!.name'></app-descrizione>
-      <app-servizi></app-servizi>
+      <app-servizi (openContact)="openContact($event)"></app-servizi>
     </div>
     <div class="col-6">
       <app-mappa [address]='hotel!.location.address'></app-mappa>
@@ -14,7 +14,7 @@
 
     </div>
 
-  <app-generic-card title="Lascia una recensione">
+  <app-generic-card title="Lascia una recensione" state="review closed">
     <app-review-form
     (hoverStar)="onHoverStar($event)"
     (starLeave)="onStarLeave()"
@@ -27,11 +27,17 @@
     ></app-review-form>
   </app-generic-card>
 
-  <app-generic-card title="Hotel Termini">
+  <div class="container position-relative" >
 
-    <app-contact-form></app-contact-form>
+    <app-generic-card title="Hotel Termini" state="contact" *ngIf="contacts">
 
-  </app-generic-card>
+      <app-contact-form></app-contact-form>
+
+    </app-generic-card>
+
+  </div>
+
+
 
 
 
