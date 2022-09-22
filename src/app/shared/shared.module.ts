@@ -4,6 +4,8 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
 import { FormsModule } from '@angular/forms';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { RouterModule } from '@angular/router';
+import { GalleryModule } from 'ng-gallery';
+import { TakePipe } from './pipes/take.pipe';
 
 
 
@@ -12,17 +14,19 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     HotelCardComponent,
-    GenericCardComponent
-
+    GenericCardComponent,
+    TakePipe
   ],
   exports: [
     GenericCardComponent,
-    HotelCardComponent
+    HotelCardComponent,
+    TakePipe
   ],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    GalleryModule
   ],
 })
 export class SharedModule {  }
