@@ -6,23 +6,28 @@ import { CartService } from 'src/app/core/services/cart.service';
   template: `
 
       <div
-          class="horiz-grid separator"
+          class="horiz-grid separator my-cart"
           *ngFor="let item of cart.items"
-
       >
+        <span>
 
           <div class="font-medium">{{item.hotel?.name}}</div>
 
-          <div>{{item.room?.label}}</div>
+          <div class="label">Camera {{item.room?.label}}</div>
 
-          <div>{{item.room?.price}}</div>
+        </span>
 
-          <div>
+
+          <span class="price">{{item.room?.price}} €</span>
+
+          <span>
               <i
                   class="icon ion-ios-trash"
                   (click)="cart.removeFromCart(item)"
               ></i>
-          </div>
+          </span>
+
+          <div class="break"></div>
 
       </div>
 
@@ -30,7 +35,8 @@ import { CartService } from 'src/app/core/services/cart.service';
           *ngIf="cart.items.length"
           type="submit"
           (click)="cart.proceed()"
-      ></button>
+          class="cstm-btn"
+      >Procedi</button>
 
       <br>
       <br>
@@ -38,13 +44,12 @@ import { CartService } from 'src/app/core/services/cart.service';
       <div class="horiz-grid">
 
           <div></div>
-          <em>{{cart.items.length}} item</em>
+          <em>{{cart.items.length}} items</em>
 
       </div>
 
   `,
-  styles: [
-  ]
+  styleUrls: ['../cart.component.scss']
 })
 export class ReservationFormComponent {
 

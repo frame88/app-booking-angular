@@ -1,0 +1,36 @@
+.my-cart {
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  align-items: center;
+
+  .font-medium {
+
+    font-size: 30px;
+  }
+
+  .label {
+    margin: 10px 0 0 10px;
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+
+  .break {
+
+    border-top: 2px solid #2996fb;
+    border-radius: 15px;
+    width: 90%;
+    height: 0;
+    margin: 20px auto;
+  }
+}

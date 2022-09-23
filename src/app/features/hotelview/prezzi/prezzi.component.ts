@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Room } from 'src/app/model/hotel';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Hotel, Room } from '../../../model/hotel';
 
 @Component({
   selector: 'app-prezzi',
@@ -8,6 +8,6 @@ import { Room } from 'src/app/model/hotel';
 })
 export class PrezziComponent{
 
-  @Input() rooms: Room[] | undefined
-
+  @Input() hotel: Hotel | undefined
+  @Output() addToCart: EventEmitter<Room> = new EventEmitter()
 }

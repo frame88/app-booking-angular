@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map, Observable } from 'rxjs';
 import { HotelService } from 'src/app/services/hotel.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,6 +7,7 @@ import { catchError, of } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { Hotel } from 'src/app/model/hotel';
 import { Review } from 'src/app/model/review';
+import { CartService } from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-hotelview3',
@@ -23,6 +23,7 @@ export class HotelviewComponent implements OnInit {
 
 
   constructor(private route: ActivatedRoute,
+              public cart: CartService,
               private router: Router,
               private hotelService: HotelService,
               private fb:FormBuilder,
