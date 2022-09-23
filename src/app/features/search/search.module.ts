@@ -6,7 +6,7 @@ import { SearchComponent } from './search.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
-
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
     SharedModule,
     RouterModule.forChild([
       {path:'', component:SearchComponent}
-    ])
+    ]),
+    MatIconModule
   ],
   exports:[
     JumbotronComponent,

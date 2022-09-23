@@ -11,9 +11,6 @@ import { Hotel } from 'src/app/model/hotel';
       </app-hotel-card>
     </div>
   </div>
-
-
-
   `,
   styles: [
   ]
