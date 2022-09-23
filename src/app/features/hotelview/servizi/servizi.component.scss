@@ -12,6 +12,19 @@ li {
   border: 1px solid rgb(197, 197, 197);
   padding: 1em;
   border-radius: 15px;
+  color: $main-color;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.lista-servizi a:hover {
+  cursor: pointer;
+}
+
+.lista-servizi #arrow {
+  color: black;
 }
 
 #contatta {

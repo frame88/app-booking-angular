@@ -1,8 +1,11 @@
 <div class="container container-servizi mt-5 d-flex">
   <div class="lista-servizi">
+
+
     <div class="div d-flex align-items-center">
-      <span><mat-icon>keyboard_arrow_left</mat-icon></span>
-      <ul class="p-0 m-0 d-flex">
+
+      <a id="arrow"><mat-icon>keyboard_arrow_left</mat-icon></a>
+      <ul class="p-0 m-0 d-flex not-allowed">
         <li><mat-icon>ac_unit</mat-icon></li>
         <li><mat-icon>airport_shuttle</mat-icon></li>
         <li><mat-icon>beach_access</mat-icon></li>
@@ -11,13 +14,15 @@
         <li><mat-icon>room_service</mat-icon></li>
         <li><mat-icon>smoke_free</mat-icon></li>
       </ul>
-      <span><mat-icon>keyboard_arrow_right</mat-icon></span>
+      <a id="arrow"><mat-icon>keyboard_arrow_right</mat-icon></a>
+
     </div>
   </div>
 </div>
+
+<!-- TASTO CHE APRE IL POPUP IN FONDO  -->
 <div class="container ">
   <div class="container d-flex justify-content-center mt-3">
     <button id="contatta" class="px-3" (click)="onOpenContact()">Contatta la struttura</button>
-    <!-- DEVE ESSERE COLLEGATO AL POP UP INFONDO ALLA PAGINA -->
   </div>
 </div>
